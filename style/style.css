@@ -119,6 +119,27 @@ header .right a:hover {
     position: relative;
 }
 
+.hero .video {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hero .video video {
+    object-fit: cover;
+    object-position: 50% 69%;
+}
+
+.hero .video::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    bottom: 0;
+}
+
 .hero .text {
     position: absolute;
     width: 100%;
@@ -184,27 +205,6 @@ header .right a:hover {
 
 .hero span {
     color: #f74454;
-}
-
-.hero .video {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.hero .video video {
-    object-fit: cover;
-    object-position: 50% 69%;
-}
-
-.hero .video::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .7);
-    bottom: 0;
 }
 
 .my-agent {
