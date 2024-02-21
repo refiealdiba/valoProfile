@@ -1,0 +1,1172 @@
+@font-face {
+    font-family: poppinsRegular;
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: poppinsBlack;
+    src: url(../fonts/Poppins-Black.ttf);
+}
+
+@font-face {
+    font-family: valorant;
+    src: url(../fonts/Valorant-Font.ttf);
+}
+
+@font-face {
+    font-family: tungsten;
+    src: url(../fonts/TungstenFont/Tungsten-Bold/Tungsten-Bold.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #222239;
+    scroll-behavior: smooth;
+}
+
+
+body::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+body::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #191922;
+  border-radius: 0px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+body::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+body::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+body::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+body::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+body::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    font-family: poppinsRegular;
+    z-index: 10;
+    box-sizing: border-box;
+    background: linear-gradient(rgba(0, 0, 0, 0.452), transparent);
+}
+
+header .left {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    font-weight: 700;
+}
+
+header .left .logo {
+    width: 30px;
+    margin: 0 7px;
+}
+
+header .right {
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+header .right a {
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0 20px;
+    color: aliceblue;
+    font-weight: 700;
+    font-size: 10px;
+    transform: scale(1);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    transition: .2s ease-in-out;
+}
+
+header .right a:hover {
+    transform: scale(1.2);
+}
+
+.hero {
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+.hero .text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* left: 30%;
+    top: 40%; */
+    z-index: 1;
+}
+
+.hero .text button {
+    cursor: pointer;
+    padding: 20px 50px;
+    font-family: poppinsRegular;
+    font-weight: 600;
+    background-color: #f74454;
+    border: none;
+    color: aliceblue;
+    letter-spacing: 5px;
+    position: relative;
+    overflow-x: hidden;
+    box-shadow: 0px 0px 0px 0px rgba(247,68,83,0);
+    transition: .5s ease-in-out;
+}
+
+.hero .text button p {
+    z-index: 5;
+}
+
+.hero .text button::after {
+    text-align: center;
+    content: 'CLICK ME';
+    padding-top: 10%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #222239;
+    left: -100%;
+    top: 0;
+    transition: .5s ease-in-out;
+    z-index: 3;
+    box-sizing: border-box;
+}
+
+.hero .text button:hover::after{
+    left: 0;
+}
+
+/* .hero button:hover {
+    box-shadow: 0px 0px 105px 45px rgba(247,68,83,0.9);
+} */
+
+.hero h1 {
+    margin-bottom: 50px;
+    font-family: valorant;
+    color: aliceblue;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 30px;
+    word-spacing: 50px;
+    z-index: 1;
+}
+
+.hero span {
+    color: #f74454;
+}
+
+.hero .video {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hero .video video {
+    object-fit: cover;
+    object-position: 50% 69%;
+}
+
+.hero .video::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    bottom: 0;
+}
+
+.my-agent {
+    height: 1000px;
+    padding-left: 20px;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+}
+
+.my-agent h1 {
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    font-family: valorant;
+    font-weight: bold;
+    font-size: 30px;
+    word-spacing: 20px;
+    letter-spacing: 10px;
+    color: aliceblue;
+}
+
+.my-agent .agent-list {
+    display: grid;
+    grid-template-columns: 30% 40% 30% ;
+    height: 100%;
+}
+
+.agent-list .left {
+    /* border: 1px solid red; */
+    padding-left: 10px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+/* .agent-list .middle {
+    border: 1px solid yellow;
+} */
+/* .agent-list .right {
+    border: 1px solid green;
+} */
+
+.agent-list .left .role {
+    display: flex;
+    /* align-items: center; */
+    margin-bottom: 50px;
+    padding-top: 30px;
+}
+
+/* .agent-list .left  */
+
+.agent-list .left .role .logo {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    /* border: 1px solid black; */
+    /* overflow: hidden; */
+}
+
+.agent-list .left .role img {
+    position: absolute;
+    width: 90px;
+    opacity: 0%;
+    transition: 1s ease-in-out;
+}
+
+.agent-list .left .role .role-text {
+    position: relative;
+    font-family: tungsten;
+    color: aliceblue;
+    font-size: 70px;
+    margin-left: 5px;
+    width: 400px;
+    /* border: 1px solid black; */
+    /* overflow: hidden; */
+}
+
+.agent-list .role .role-text p {
+    position: absolute;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    transition: .8s ease-in-out;
+    opacity: 0%;
+}
+
+/* C-ABILITY */
+.agent-list .left .ability .c-ability {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.agent-list .left .ability .c-ability .c-left .c-logo {
+    /* border: 1px solid white; */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.agent-list .left .ability .c-ability .c-left .c-logo img {
+    width: inherit;
+    position: absolute;
+    transition: .5s ease-in-out;
+}
+
+.agent-list .left .ability .c-ability .c-left p {
+    padding: 3px 0;
+    margin-top: 2px;
+    width: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    font-family: tungsten;
+    font-size: 20px;
+    text-align: center;
+    color: aliceblue;
+}
+
+
+.agent-list .left .ability .c-ability .c-right {
+    width: 100%;
+    padding-left: 10px;
+    /* padding-top: 10px; */
+    box-sizing: border-box;
+}
+
+.c-right .ability-name {
+    margin-bottom: 10px;
+    position: relative;
+    height: 25px;
+    width: 220px;
+    overflow: hidden;
+}
+
+.c-right .ability-name h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: aliceblue;
+    position: absolute;
+    transition: 1s ease-in-out;
+}
+
+.c-right .ability-desc {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: aliceblue;
+    line-height: 17px;
+    position: relative;
+    overflow: hidden;
+    height: 90px;
+}
+
+.c-right .ability-desc p {
+    position: absolute;
+    transition: 1s ease-in-out;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+/* C-ABILITY END */
+
+/* Q-ABILITY */
+.agent-list .left .ability .q-ability {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.agent-list .left .ability .q-ability .q-left .q-logo {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.agent-list .left .ability .q-ability .q-left .q-logo img {
+    width: inherit;
+    position: absolute;
+    transition: .7s ease-in-out;
+}
+
+.agent-list .left .ability .q-ability .q-left p {
+    padding: 3px 0;
+    margin-top: 2px;
+    width: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    font-family: tungsten;
+    font-size: 20px;
+    text-align: center;
+    color: aliceblue;
+}
+
+.agent-list .left .ability .q-ability .q-right {
+    width: 100%;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.q-right .ability-name {
+    margin-bottom: 10px;
+    position: relative;
+    height: 25px;
+    width: 220px;
+    overflow: hidden;
+}
+
+.q-right .ability-name h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: aliceblue;
+    position: absolute;
+    transition: 1.05s ease-in-out;
+}
+
+.q-right .ability-desc {
+        font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: aliceblue;
+    line-height: 17px;
+    position: relative;
+    overflow: hidden;
+    height: 90px;
+}
+
+.q-right .ability-desc p {
+    position: absolute;
+    transition: 1.05s ease-in-out;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+/* Q-ABILITY END */
+
+/* E-ABILITY */
+.agent-list .left .ability .e-ability {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.agent-list .left .ability .e-ability .e-left .e-logo {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.agent-list .left .ability .e-ability .e-left .e-logo img {
+    width: inherit;
+    position: absolute;
+    transition: .8s ease-in-out;
+}
+
+.agent-list .left .ability .e-ability .e-left p {
+    padding: 3px 0;
+    margin-top: 2px;
+    width: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    font-family: tungsten;
+    font-size: 20px;
+    text-align: center;
+    color: aliceblue;
+}
+
+.agent-list .left .ability .e-ability .e-right {
+    width: 100%;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.e-right .ability-name {
+    margin-bottom: 10px;
+    position: relative;
+    height: 25px;
+    width: 220px;
+    overflow: hidden;
+}
+
+.e-right .ability-name h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: aliceblue;
+    position: absolute;
+    transition: 1.15s ease-in-out;
+}
+
+.e-right .ability-desc {
+        font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: aliceblue;
+    line-height: 17px;
+    position: relative;
+    overflow: hidden;
+    height: 110px;
+}
+
+.e-right .ability-desc p {
+    position: absolute;
+    transition: 1.15s ease-in-out;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+/* E-ABILITY END */
+
+/* X-ABILITY */
+.agent-list .left .ability .x-ability {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.agent-list .left .ability .x-ability .x-left .x-logo {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.agent-list .left .ability .x-ability .x-left .x-logo img {
+    width: inherit;
+    position: absolute;
+    transition: 1s ease-in-out;
+}
+
+.agent-list .left .ability .x-ability .x-left p {
+    padding: 3px 0;
+    margin-top: 2px;
+    width: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    font-family: tungsten;
+    font-size: 20px;
+    text-align: center;
+    color: aliceblue;
+}
+
+.agent-list .left .ability .x-ability .x-right {
+    width: 100%;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.x-right .ability-name {
+    margin-bottom: 10px;
+    position: relative;
+    height: 25px;
+    width: 300px;
+    overflow: hidden;
+}
+
+.x-right .ability-name h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: aliceblue;
+    position: absolute;
+    transition: 1.25s ease-in-out;
+}
+
+.x-right .ability-desc {
+        font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: aliceblue;
+    line-height: 17px;
+    position: relative;
+    overflow: hidden;
+    height: 90px;
+}
+
+.x-right .ability-desc p {
+    position: absolute;
+    transition: 1.25s ease-in-out;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+/* X-ABILITY END */
+
+/* AGENT NAME */
+.middle {
+    font-family: valorant;
+    font-size: 350px;
+    color: #b8107d;
+    position: relative;   
+}
+
+.middle p {
+    width: 1200px;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    transition: 1s ease-in-out;
+    /* transform: scale(3); */
+    z-index: 1;
+}
+
+.middle .after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 2%;
+    left: -20%;
+    transform: rotate(-90deg);
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #b8107d;
+}
+
+.middle .before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 2%;
+    left: -60%;
+    transform: rotate(-90deg);
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #b8107d;
+}
+
+/* AGENT PICT */
+.middle .agent {
+    position: relative;
+}
+
+.middle .agent img {
+    position: absolute;
+}
+
+/* AGENT PICT */
+.agent img {
+    width: 700px;
+    filter: blur(10px);
+    opacity: 0;
+    transition: 1s cubic-bezier(.76,.35,.83,1);
+}
+
+.agent .img-active {
+    filter: blur(0px);
+    opacity: 100%;
+}
+
+/* RIGHT */
+.agent-list .right {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.agent-list .right .highlight {
+    margin-right: 30px;
+}
+
+.agent-list .right .highlight h1 {
+    margin-bottom: -15px;
+    margin-right: 35px;
+    text-align: right;
+    /* background-color: #222239; */
+    color: #f74454;
+}
+
+.agent-list .right .highlight video {
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 30px 30px 0px 0px #131320;
+}
+
+.agent-list .right .button {
+    margin-top: 50px;
+    padding-bottom: 100px;
+    display: flex;
+    gap: 8px;
+}
+
+.agent-list .right .button button {
+    cursor: pointer;
+    border: none;
+    font-weight: 700;
+    color: #131320;
+    background-color: #f74454;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 15px 30px;
+    /* width: 120px;
+    height: 60px; */
+    border-radius: 15px;
+    margin: 0 5px;
+    transition: .3s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.agent-list .right .button button:hover {
+    color: #f74454;
+    background-color: #131320;
+}
+
+.agent-list .right .button button:active {
+    transform: scale(.7);
+}
+
+.agent-list .right .button button svg path {
+    fill: #222239;
+}
+
+#prev {
+    display: none;
+}
+
+/* MAP */
+.my-map {
+    color: aliceblue;
+    transition: 1s ease-in-out;
+    position: relative;
+    height: 950px;
+}
+
+.my-map .img-map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .7s ease-in-out;
+    /* z-index: -1; */
+}
+
+.my-map h1 {
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    font-family: valorant;
+    font-weight: bold;
+    font-size: 30px;
+    word-spacing: 20px;
+    letter-spacing: 10px;
+    color: aliceblue;
+    z-index: 10;
+}
+
+.my-map .map-list {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    height: 800px;
+    z-index: 10;
+}
+
+.my-map .map-list .left {
+    position: relative;
+    overflow: hidden;
+}
+.my-map .map-list .mid {
+    position: relative;
+}
+
+.my-map .map-list .left .map-name {
+    position: absolute;
+    transition: .3s ease-in-out;
+}
+
+.my-map .map-list .left p {
+    cursor: pointer;
+    font-family: valorant;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-left: 50px;
+    transition: .3s ease-in-out;
+    padding-bottom: 50px;
+}
+
+.my-map .map-list .mid p {
+    width: 110%;
+    transform: translateX(-100px);
+    position: absolute;
+    bottom: 10%;
+    padding: 30px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.my-map .map-list .right {
+    display: flex;
+    justify-content: center;
+}
+
+.my-map .map-list .right .mini-container {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.my-map .map-list .right .mini-container img{
+    width: 100%;
+    height: 100%;
+    transform: scale(.8);
+}
+
+/* MUSIC */
+.my-music {
+    /* background-image: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(0,0,0,0.7511379551820728) 100%), url('../img/music/lana.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .5s ease-in-out;
+}
+
+.my-music .header-music {
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    font-family: valorant;
+    font-weight: bold;
+    font-size: 30px;
+    word-spacing: 20px;
+    letter-spacing: 10px;
+    color: aliceblue;
+}
+
+.my-music .music-container {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    height: 600px;
+    /* padding-bottom: 20px; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.my-music .music-container .music-bg {
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.my-music .music-container .music-bg .music-details {
+    color: aliceblue;
+    display: flex;
+    align-items: end;
+    padding-left: 30px;
+}
+
+.my-music .music-container .music-bg .music-details .music-text {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.my-music .music-container .music-bg .music-details .music-cover {
+    width: 120px;
+    height: 120px;
+    background-color: #131320;
+    border: none;
+    object-fit: cover;
+}
+
+.my-music .music-container .music-bg .music-details .music-name {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.my-music .music-container .music-bg .music-details .music-artist {
+    font-size: 20px;
+    font-weight: 600;
+    color: #b2b9be;
+}
+
+.my-music .music-container .music-bg .music-player {
+    position: relative;
+}
+
+.my-music .music-container .music-bg .music-player .volume-music {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    right: 5%;
+}
+
+.my-music .music-container .music-bg .music-player .volume-music progress {
+    cursor: pointer;
+    width: 100px;
+    margin-left: 7px;
+    height: 5px;
+    border: none;
+    border-radius: 10px;
+}
+
+.my-music .music-container .music-bg .music-player .volume-music progress::-webkit-progress-bar {
+    background-color: #4d4d4d;
+    border-radius: 10px;
+}
+
+.my-music .music-container .music-bg .music-player .volume-music progress::-webkit-progress-value {
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.my-music .music-container .music-bg .music-player .music-slider {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    color: aliceblue;
+    align-items: center;
+}
+
+.my-music .music-container .music-bg .music-player .music-slider progress{
+    cursor: pointer;
+    width: 90%;
+    height: 5px;
+    outline: none;
+    border: none;
+}
+
+.my-music .music-container .music-bg .music-player .music-slider progress::-webkit-progress-bar {
+    /* background-color: rgba(19, 19, 32, .3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: .3px solid rgba(255, 255, 255, 0.05); */
+    border-radius: 10px;
+    background-color: #4d4d4d;
+}
+
+.my-music .music-container .music-bg .music-player .music-slider progress::-webkit-progress-value {
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.my-music .music-container .music-bg .music-player .music-slider .current-time {
+    font-size: 12px;
+    /* margin-top: 26px; */
+    margin-right: 10px;
+}
+.my-music .music-container .music-bg .music-player .music-slider .total-time {
+    font-size: 12px;
+    /* margin-top: 26px; */
+    margin-left: 10px;
+}
+
+.my-music .music-container .music-bg .music-player .music-button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.my-music .music-container .music-bg .music-player .music-button .prev-music {
+    cursor: pointer;
+    
+}
+.my-music .music-container .music-bg .music-player .music-button .playpause-music {
+    cursor: pointer;
+    padding: 10px;
+    padding-left: 16px;
+    margin: 0 20px;
+    /* border-radius: 50%; */
+    /* background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.05); */
+}
+.my-music .music-container .music-bg .music-player .music-button .next-music {
+    cursor: pointer;
+}
+
+.my-music .music-container .music-list {
+    /* border: 1px solid red; */
+    position: relative;
+}
+
+.my-music .music-container .music-list .container {
+    position: absolute;
+    top: -25%;
+    /* border: 1px solid black; */
+    width: 100%;
+    left: 0;
+    height: 125%;
+    /* overflow-y: scroll; */
+    /* background-color: #222239; */
+}
+
+.my-music .music-container .music-list .container .played-music .playing-container {
+    margin-left: -80px;
+    width: 105%;
+    padding: 20px;
+    padding-left: 40px;
+    padding-bottom: 30px;
+    /* background-color: rgb(19, 19, 32); */
+    background: rgba(19, 19, 32, .8);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border-bottom-left-radius: 20px;
+    /* border: 1px solid rgba(255, 255, 255, 0.05); */
+}
+
+.my-music .music-container .music-list .container .played-music h1 {
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.my-music .music-container .music-list .container .played-music .playing-detail {
+    display: flex;
+    align-items: center;
+}
+
+.my-music .music-container .music-list .container .played-music .playing-detail img {
+    width: 90px;
+    height: 90px;
+    margin-right: 30px;
+}
+
+.my-music .music-container .music-list .container .played-music .playing-detail .playing-text .playing-song {
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+
+.my-music .music-container .music-list .container .played-music .playing-detail .playing-text .playing-artist {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 7px;
+    color: #b2b9be;
+}
+
+.my-music .music-container .music-list .container .music-all {
+    /* padding-top: 30px; */
+    height: 75%;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: none;
+    border-right: none;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    
+}
+
+.my-music .music-container .music-list .container .music-all::-webkit-scrollbar {
+    display: none;
+}
+
+.my-music .music-container .music-list .container .music-all .box-music {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* background-color: #161624; */
+    padding: 18px;
+    padding-left: 50px;
+    box-sizing: border-box;
+    transition: .2s ease-in-out;
+}
+
+.my-music .music-container .music-list .container .music-all .box-music:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.my-music .music-container .music-list .container .music-all .box-music img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.my-music .music-container .music-list .container .music-all .box-music .box-detail {
+    margin-left: 10px;
+}
+
+.my-music .music-container .music-list .container .music-all .box-music .box-detail h1 {
+    color: aliceblue;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.my-music .music-container .music-list .container .music-all .box-music .box-detail p {
+    color: #b2b9be;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+footer {
+    font-family: valorant;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #131320;
+    padding: 30px 20px;
+    padding-top: 50px;
+}
+
+footer .left {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    font-weight: 700;
+}
+
+footer .right {
+    display: flex;
+    align-items: center;
+}
+
+footer .right p {
+    font-size: 13px;
+    margin-right: 10px;
+}
