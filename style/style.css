@@ -106,7 +106,7 @@ header .right a {
     text-transform: uppercase;
     letter-spacing: 4px;
     transition: .2s ease-in-out;
-    font-family: poppinsRegular;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header .right a:hover {
@@ -135,7 +135,7 @@ header .right a:hover {
 .hero .text button {
     cursor: pointer;
     padding: 20px 50px;
-    font-family: poppinsRegular;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     background-color: #f74454;
     border: none;
