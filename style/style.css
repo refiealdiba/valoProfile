@@ -147,10 +147,6 @@ header .right a:hover {
     transition: .5s ease-in-out;
 }
 
-.hero .text button p {
-    z-index: 5;
-}
-
 .hero .text button::after {
     text-align: center;
     content: 'CLICK ME';
