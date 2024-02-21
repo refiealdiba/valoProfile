@@ -512,7 +512,7 @@ let musicList = [
         artist: "Green Day",
         cover: "img/music/cover/greenCover.jpg",
         bg: "img/music/greenBg.jpg",
-        path: "audio/song/Last Night On Earth.mp3"
+        path: "audio/song/LastNightOnEarth.mp3"
     },
     
 ]
