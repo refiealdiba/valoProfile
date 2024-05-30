@@ -1,1 +1,1 @@
-This file does not yet have responsive features
+This file does not have responsive features yet
